@@ -4,7 +4,7 @@
     class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
   >
     <div
-      class="bg-white rounded-lg p-8 w-9/12 h-full max-w-4xl overflow-auto relative flex"
+      class="bg-white rounded-lg p-8 w-9/12 h-full max-w-4xl overflow-auto relative flex "
     >
       <!-- Кнопка закрытия -->
       <button
@@ -21,14 +21,14 @@
           alt="Album Cover"
           class="w-full rounded-lg mb-4"
         />
-        <div class="mt-4 p-2 ba bg-gray-100 rounded-lg">
+        <div class="px-2 py-3 ba bg-slate-50 rounded-lg">
           <h3 class="text-[18px] font-bold flex justify-center m-1">
             Треклист
           </h3>
           <!-- Здесь будут треки -->
           <ol class="list-decimal pl-5 font-light text-[14px]">
             <li v-for="track in album.tracklist" :key="track">
-              {{ track }}
+              {{ track  || "Треклист не указан"}}
             </li>
           </ol>
         </div>
@@ -41,9 +41,9 @@
           <p class="text-[20px]">{{ album.artist }}</p>
 
           <div class="mb-4 mt-2">
-            <p class="text-gray-700 text-[12px]">Год: {{ album.year }}</p>
+            <p class="text-gray-700 text-[12px]">Год: {{ album.year  || "Год не указан"}}</p>
             <p class="text-gray-700 text-[12px]">
-              Жанры: {{ formatGenres(album.genres) }}
+              Жанры: {{ formatGenres(album.genres) || "Жанры не указаны"}}
             </p>
           </div>
 
@@ -94,7 +94,7 @@
             v-for="review in backendReviews"
             :key="review.id"
             :imageUrl="review.imageUrl"
-            class="flex mt-2 bg-amber-50 p-2 rounded-md"
+            class="flex mt-2 bg-slate-50 p-2 rounded-md"
           >
             <img
               :src="review.imageUrl || defaultAvatar"

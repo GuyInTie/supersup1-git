@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/soup_database
-    username: postgres
-    password: stormspirit_123
+    url: jdbc:postgresql://postgres:5432/soup_database
+    username: postgres-soup
+    password: 12345679
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -13,3 +13,4 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        default_schema: public

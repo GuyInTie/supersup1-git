@@ -32,7 +32,7 @@ function closeModal() {
         <p class="text-gray-400">Ничего не нашлось...</p>
       </div>
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
       >
         <Card
           v-for="item in items"

@@ -10,10 +10,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>ru.kors</groupId>
-	<artifactId>springstudents</artifactId>
+	<groupId>Soup.group</groupId>
+	<artifactId>soundsoup</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springstudents</name>
+	<name>soundsoup</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
