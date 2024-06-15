@@ -22,7 +22,6 @@ import java.util.Optional;
 public class  AlbumController {
     private final AlbumService service;
 
-    @CrossOrigin(origins = "https://localhost:5173")
     @GetMapping
     public List<Album> findAllAlbums() {
         return service.findAllAlbums();

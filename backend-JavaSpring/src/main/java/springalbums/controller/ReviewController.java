@@ -16,7 +16,6 @@ import java.util.List;
 public class ReviewController {
     private final ReviewService service;
 
-    @CrossOrigin(origins = "https://localhost:5173")
     @GetMapping
     public List<Review> findAllReviews() {
         return service.findAllReviews();
