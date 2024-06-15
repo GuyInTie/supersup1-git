@@ -10,7 +10,7 @@ const items = ref([]);
 
 onMounted(async () => {
   try {
-    const { data } = await axios.get("http://localhost:8080/api/v1/albums");
+    const { data } = await axios.get("http://51.250.30.170:8080/api/v1/albums");
     items.value = data;
     console.log(data);
   } catch (err) {

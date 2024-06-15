@@ -219,7 +219,7 @@ async function rateAlbum(star) {
     // Отправка рейтинга на бэкенд
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/v1/rates/save/${props.album.id}/${star}`
+        `http://51.250.30.170:8080/api/v1/rates/save/${props.album.id}/${star}`
       );
       console.log("Rating submitted:", response.data);
     } catch (error) {
@@ -235,7 +235,7 @@ async function fetchReviews() {
   try {
     console.log(props.album); // Выведем ID альбома в консоль перед выполнением запроса
     const response = await axios.get(
-      `http://localhost:8080/api/v1/reviews/album_id/${props.album.id}`
+      `http://51.250.30.170:8080/api/v1/reviews/album_id/${props.album.id}`
     );
 
     console.log(response);
@@ -257,7 +257,7 @@ async function addReview() {
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/v1/reviews/add/${props.album.id}`,
+        `http://51.250.30.170:8080/api/v1/reviews/add/${props.album.id}`,
         newReview
       );
       backendReviews.value.push(response.data);
