@@ -10,7 +10,7 @@ export default defineConfig({
     outDir: 'dist',
   },
   devServer: {
-      proxy: 'http://localhost:8080'
+      proxy: 'http://51.250.30.170:8080'
     },
   plugins: [
     vue(),
@@ -22,7 +22,7 @@ export default defineConfig({
     },
     host: true,
     strictPort: true,
-    port: 5173,
+    port: 80,
   },
   resolve: {
     alias: {
